@@ -1,7 +1,7 @@
 {
   "name": "@cheeseswap/cheeseswap-core",
   "description": "Core contracts for the CheeseSwap protocol",
-  "version": "0.1.5",
+  "version": "0.2.1",
   "homepage": "https://cheeseswap.app",
   "repository": {
     "type": "git",
@@ -32,23 +32,22 @@
     "typescript": "^3.7.3"
   },
   "scripts": {
-   "lint": "yarn prettier ./test/*.ts --check",
-   "lint:fix": "yarn prettier ./test/*.ts --write",
-   "clean": "rimraf ./build/",
-   "precompile": "yarn clean",
-   "compile": "waffle .waffle.json",
-   "pretest": "yarn compile",
-   "test": "mocha",
-   "prepublishOnly": "yarn test",
-   "build": "tsdx build",
-   "rename": "renamer --find '/(\\-)(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)/' --replace '' './*.tgz'",
-   "pack": "npm pack",
-   "pack:rename": "npm-run-all --sequential pack rename",
-   "release": "standard-version"
+    "lint": "yarn prettier ./test/*.ts --check",
+    "lint:fix": "yarn prettier ./test/*.ts --write",
+    "clean": "rimraf ./build/",
+    "precompile": "yarn clean",
+    "compile": "waffle .waffle.json",
+    "pretest": "yarn compile",
+    "test": "mocha",
+    "prepublishOnly": "yarn test",
+    "rename": "renamer --find '/(\\-)(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)/' --replace '' './*.tgz'",
+    "pack": "npm pack",
+    "pack:rename": "npm-run-all --sequential pack rename",
+    "release": "standard-version"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "truffle-hdwallet-provider": "^1.0.17",
+    "@truffle/hdwallet-provider": "^1.1.1",
     "truffle": "^5.1.41",
     "truffle-flattener": "^1.4.4"
   }
