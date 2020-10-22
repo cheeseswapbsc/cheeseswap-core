@@ -7,14 +7,14 @@ import { ecsign } from 'ethereumjs-util'
 
 import { expandTo18Decimals, getApprovalDigest } from './shared/utilities'
 
-import BEP20 from '../build/BEP20.json'
+import ERC20 from '../build/ERC20.json'
 
 chai.use(solidity)
 
 const TOTAL_SUPPLY = expandTo18Decimals(10000)
 const TEST_AMOUNT = expandTo18Decimals(10)
 
-describe('CheeseSwapBEP20', () => {
+describe('CheeseSwapERC20', () => {
   const provider = new MockProvider({
     hardfork: 'istanbul',
     mnemonic: 'horn horn horn horn horn horn horn horn horn horn horn horn',
@@ -24,7 +24,7 @@ describe('CheeseSwapBEP20', () => {
 
   let token: Contract
   beforeEach(async () => {
-    token = await deployContract(wallet, BEP20, [TOTAL_SUPPLY])
+    token = await deployContract(wallet, ERC20, [TOTAL_SUPPLY])
   })
 
   it('name, symbol, decimals, totalSupply, balanceOf, DOMAIN_SEPARATOR, PERMIT_TYPEHASH', async () => {

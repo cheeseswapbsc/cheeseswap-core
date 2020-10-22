@@ -1,9 +1,9 @@
 pragma solidity =0.5.16;
 
-import './interfaces/ICheeseSwapBEP20.sol';
+import './interfaces/ICheeseSwapERC20.sol';
 import './libraries/SafeMath.sol';
 
-contract CheeseSwapBEP20 is ICheeseSwapBEP20 {
+contract CheeseSwapERC20 is ICheeseSwapERC20 {
     using SafeMath for uint;
 
     string public constant name = 'CheeseSwap LPs';
