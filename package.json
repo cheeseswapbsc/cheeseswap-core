@@ -1,7 +1,7 @@
 {
   "name": "@cheeseswap/cheeseswap-core",
   "description": "Core contracts for the CheeseSwap protocol",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://cheeseswap.finance",
   "repository": {
     "type": "git",
